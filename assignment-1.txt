@@ -1,0 +1,154 @@
+/**
+ * Assignment #1: Expressions and selection statements.
+ * This program prints the CS 210 schedule for a given date in the Fall'20 Semester.
+ **/
+
+#include <stdio.h>
+
+int main() {
+    int month, day;
+    printf("Enter date (mm/dd): ");
+    // ADD Your code.  Be sure your output matches exactly.  
+    // Check using reference binary
+    scanf("%d/%d", &month,&day);
+    // Adding a new comment
+    if ((day > 31) || (day < 1)){
+        printf(" Day values must be between 1 and 31.");
+        return 0;
+    }
+    if ((month > 12) || (month < 1)){
+        printf("Month values must be between 1 and 12.");
+        return 0;
+    }
+    if ((month == 2) && (day > 28)){
+        printf("Invalid February date for year 2020.");
+        return 0;
+    }
+    if (month == 9){
+        switch(day){
+                    case 3: printf("Lecture.");
+                        break;
+                    case 7: printf("Labor Day.");
+                        break;
+                    case 8: printf("Lecture.");
+                        break;
+                    case 10: printf("Lecture.");
+                        break;
+                    case 14: printf("Discussion.");
+                        break;
+                    case 15: printf("Lecture.");
+                        break;
+                    case 17: printf("Lecture.");
+                        break;
+                    case 21: printf("Discussion.");
+                        break;
+                    case 22: printf("Lecture.");
+                        break;
+                    case 24: printf("Lecture.");
+                        break;
+                    case 28: printf("Discussion.");
+                        break;
+                    case 29: printf("Lecture.");
+                        break;
+                    default: printf("No class on this day.");
+                        break;
+            }
+        }
+    switch(month) {
+        case 10: {switch(day){
+                    case 1: printf("Lecture.");
+                        break;
+                    case 2: printf("No class on this day.");
+                        break;
+                    case 3: printf("No class on this day.");
+                        break;
+                    case 5: printf("Discussion.");
+                        break;
+                    case 6: printf("MIDTERM.");
+                        break;
+                    case 7: printf("Drop without W.");
+                        break;
+                    case 8: printf("Lecture.");
+                        break;
+                    case 10: printf("No class on this day.");
+                        break;
+                    case 12: printf("Columbus Day.");
+                        break;
+                    case 13: printf("Discussion.");
+                        break;
+                    case 15: printf("Lecture.");
+                        break;
+                    case 19: printf("Discussion.");
+                        break;
+                    case 20: printf("Lecture.");
+                        break;
+                    case 22: printf("Lecture.");
+                        break;
+                    case 26: printf("Discussion.");
+                        break;
+                    case 27: printf("Lecture.");
+                        break;
+                    case 29: printf("Lecture.");
+                        break;
+                    default: printf("No class on this day.");
+                        break;
+                            }
+                    }break;
+        case 11: {switch(day){
+                    case 2: printf("Discussion.");
+                        break;
+                    case 3: printf("Lecture.");
+                        break;
+                    case 5: printf("MIDTERM.");
+                        break;
+                    case 6: printf("Drop with W.");
+                        break;
+                    case 9: printf("Discussion.");
+                        break;
+                    case 10: printf("Lecture.");
+                        break;
+                    case 12: printf("Lecture.");
+                        break;
+                    case 16: printf("Discussion.");
+                        break;
+                    case 17: printf("Lecture.");
+                        break;
+                    case 19: printf("Lecture.");
+                        break;
+                    case 23: printf("Discussion.");
+                        break;
+                    case 24: printf("Lecture.");
+                        break;
+                    case 25: printf("Thanksgiving recess.");
+                        break;
+                    case 26: printf("Thanksgiving recess.");
+                        break;
+                    case 27: printf("Thanksgiving recess.");
+                        break;
+                    case 28: printf("Thanksgiving recess.");
+                        break;
+                    case 29: printf("Thanksgiving recess.");
+                        break;
+                    case 30: printf("Discussion.");
+                        break;
+                    default: printf("No class on this day.");
+                        break;
+        }break;
+    }
+        case 12: {switch(day){
+                    case 1: printf("Lecture.");
+                       break;
+                    case 3: printf("Lecture.");
+                        break;
+                    case 7: printf("Discussion.");
+                        break;
+                    case 8: printf("Lecture.");
+                        break;
+                    case 10: printf("Last day of classes.");
+                        break;
+                    default: printf("No class on this day.");
+                        break;
+        }break;
+    }
+    }
+}
